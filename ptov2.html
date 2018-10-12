@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PTOv2</title>
+</head>
+    <body>
+        <h1>PTOv2</h1>
+        <form action="#" onsubmit="grossFunction()">
+            <p>How many years have you worked at this job?</p>
+            <input type="text" id='myYears'>
+            <button type="submit">Submit</button>
+        </form>
+
+        <p> Amount of pto available is : <span id="output"></span></p>
+        
+        <script type="text/javascript">
+            function grossFunction(){
+                event.preventDefault();
+                var output = (document.getElementById("output"));
+                var yearsWorked = parseInt(document.getElementById('myYears').value);
+                
+                if (yearsWorked <= 4) {
+                    var pto = 5;
+                } 
+                if (yearsWorked >= 5){
+                    var pto = 6;
+                } 
+                if (yearsWorked >= 10){
+                    var pto = 7;
+                }
+                var biweekly = 26;
+                var hoursPerWeek = 40;
+                var ptoWeek = (biweekly * pto) / hoursPerWeek;
+                output.innerHTML = ptoWeek;
+            }    
+        </script>
+    </body>
+</html>

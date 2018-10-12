@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PTO Program</title>
+</head>
+<body>
+    <h1>PTO Program</h1>
+    <h2>PTO V1.0</h2>
+    <p>A simple program that calculates the PTO (Paid Time Off) for 1yr.</p>
+    <ol>
+        <li>START</li>
+        <li>SET IN paychecksPerYear=26</li>
+        <li>SET IN hrsPerPaycheck=5</li>
+        <li>DISPLAY "This is a simple program that outputs how many hours you earn a year for PTO(Paid Time Off)."</li>
+        <li>SET IN totalHoursPerYear = hrsPerPayCheck * paychecksPerYear</li>
+        <li>DISPLAY "You earn totalHoursPerYear hours per year."</li>
+        <li>END</li>
+    </ol>
+    <h2>PTO V2.0</h2>
+    <p>A simple program that calculates the PTO(Paid Time off) for the corresponding amount of time the employee has worked in years. Returns amount of PTO in weeks.</p>
+    <ol>
+        <li>START</li>
+        <li>SET INT hrsPerPaycheckYear</li>
+        <li>SET INT paychecksPerYear =26</li>
+        <li>DISPLAY "How many years have you worked?"</li>
+        <li>INPUT years Worked</li>
+        <li>if yearsWorked less than 5 hrsPerPaycheck = 5</li>kp 
+        <li>if yearsWorked equal to or greater than 5 hrsPerPaycheck = 6</li>
+        <li>if yearsWorked equal to or greater than 10 hrsPerPaycheck = 7</li>
+        <li>Set REAL weeks =totalHoursPerYear/40</li>
+        <li>DISPLAY "You get "weeks "weeks off a year"</li>
+        <li>END</li>
+    </ol>
+    <h3>PTO v3.0</h3>
+    <p>A simple PTO(Paid time off) calculator that uses how many years you have worked to get correct PTO rate. Then uses how many weeks you have worked so far this year to calculate total PTO to date. Then deducts any PTO that you have taken to date. Results can be returned in hours or days or weeks.</p>
+    <ol>
+        <li>START</li>
+        <li>DISPLAY "How many years have you worked?"</li>
+        <li>INPUT "yearsWorked"</li>
+        <li>DISPLAY "How many weeks have you worked this year?"</li>
+        <li>INPUT "weeksWorked"</li>
+        <li>Display "How many PTOhours have you used this year?"</li>
+        <li>INPUT "hoursUsed"</li> 
+        <li>SET INT totalHours = 40 </li>
+        <li>SET INT totalDays = 8</li>
+        <li>SET INT checkPerYear = 26</li>
+        <li>SET (checkPerYear * ptoPerCheck) - hoursUsed</li>
+        <li>END</li>
+    </ol>
+    <h3>Simple Investment calculator</h3>
+    <ol>
+        <li>Start</li>
+        <li>DISPLAY "Enter a cash sum you want to invest."</li>
+        <li>INPUT interestRate</li>
+        <li>DISPLAY "Please enter an additional sum for each term of your investment."</li>
+        <li>INPUT interestRate</li>
+        <li>DISPLAY "Please enter an additional sum for each term of your investment."</li>
+        <li>DISPLAY years or months</li>
+        <li>INPUT years or months</li>
+        <li>SET totalInterestEarned = sum</li>
+        <li>DISPLAY answer</li>
+        <li>END</li>
+    </ol>
+    
+</body>
+</html>
+
+
+
+PTO (Paid Time Off) Program 
+V1
+5hrs per paycheck
+BI-weekly
+PTO for 1yr
+
+-----------------
+V2
+1-5 = 5hrs
+>5yrs = 6hrs
+>10yrs = 7hrs
+PTO for 1 yr in weeks
+

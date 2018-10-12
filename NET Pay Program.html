@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NET Pay Program</title>
+</head>
+<body>
+    <h1>NET Pay Program</h1>
+    <p>Simple NET Pay calculator. It takes your GROSS Pay and then deducts Federala, State, FICA. It has the option to deduct any additional amount from your check. Then it displays your NET pay.</p>
+    <!-- FED 10% -->0
+    <!-- STATE 5% -->
+    <!-- FICA 7.62% -->
+    <!-- any additionals -->
+    <ol>
+        <li>START</li>
+        declarations:
+        real FED1 = 10%
+        real STATE1 = 5%
+        real FICA1 = 7.62%
+        input additional = 0
+        <li>DISPLAY "we are deducting Federal tax."</li>
+        <li>DISPLAY "we are deducting State tax."</li>
+        <li>DISPLAY "we are deducting FICA tax."</li>
+        <li>set taxDeductions = Gross Pay- (Fed1+ State1+Fica1+ additional)</li>  
+        <li>INPUT "add any additional payments to be deducted from check"</li>
+        <li>END</li>
+    </ol>
+    <p>what is your gross pay?</p>
+    <form action="#" onsubmit="Netpay()">
+        <input type="text" id="grossPay">
+        <p>add any additional fees.</p>
+        <input type="text" id="additional" value="0">
+        <input type="submit" id="submit">
+    </form>
+    
+    <p>Your Net Pay is <span id="output"></span>.</p>
+    <script>
+        function Netpay() {
+            var output = document.getElementById('output');
+            var grossPay = parseInt(document.getElementById('grossPay').value);
+            var additional = parseInt(document.getElementById('additional').value);
+
+            var Fed1 = grossPay * .15
+            var State1 = grossPay * .05
+            var Fica1 = grossPay * .0762
+            var netPay = grossPay - (Fed1 + State1 + Fica1 + additional)
+            output.innerHTML = "$" + netPay;
+        }
+    </script>
+</body>
+</html>

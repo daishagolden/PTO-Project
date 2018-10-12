@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PTO v1.0</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #output {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>PTO Hours per year</h1>
+    <p>This is a simple program that ouputs how many hours you earn a year for PTO (Paid Time Off).</p>
+    <p>You earn 5hrs per paycheck. We get 26 paychecks a year.</p>
+    <p>You earn <span id= "output"><script src="calc.js"></script></span> hours per year.</p>   
+    <script>
+        var output = document.getElementById('output')
+        
+        var paychecksPerYear = 26;
+
+        var hrsPerPaycheck = 5;
+
+        var totalHoursPerYear = hrsPerPaycheck * paychecksPerYear;
+
+        output.innerHTML = '<em>' + totalHoursPerYear + '<em>'
+    </script>
+</body>
+</html>
